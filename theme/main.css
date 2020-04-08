@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display:block;
+    min-height:100vh;
+   
+}
+
+header{
+    min-height:20vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1{
+    font-size:2.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+main{
+    width:90%;
+    margin:auto;
+}
+
+main div {
+    width:100%;
+    column-count:5;
+    column-gap:.5vmax;
+    font-size:0
+}
+
+main div a {
+    display:inline-block;
+    width:100%;
+    border:1px solid lightgrey;
+    margin-bottom:.5vmax;
+}
+
+main div a:nth-of-type(odd):hover{
+    transform: rotate(5deg);
+    
+}
+
+main div a:nth-of-type(even):hover{
+    transform: rotate(-5deg);
+}
+
+main div a img{
+    box-sizing: border-box;
+    border:4px solid white;
+    width:100%;
+}
+
+footer p{
+    padding:10px;
+    text-align:right;
+    font-size:0.8rem;
+    border-top :3px double lightgrey;
+}
