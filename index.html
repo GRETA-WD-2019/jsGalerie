@@ -9,6 +9,45 @@
         <link rel="stylesheet" type="text/css" href="theme/main.css">
 
 
+
+		<script>
+
+
+			var jsGalerieShowPhoto=function(evenement){
+
+				evenement.preventDefault();
+
+				console.log("affiche de la photo.");
+
+
+			}
+
+
+
+			var jsGalerieInit=function(){
+
+				//récupération de tous les liens
+
+				let Liens=document.querySelectorAll(".jsGalerie>a");
+
+				console.log(Liens);
+
+				for (index=0;index<Liens.length;index++){
+
+						Liens[index].addEventListener("click",jsGalerieShowPhoto);
+
+				}
+
+
+				
+			}
+
+			window.addEventListener("load",jsGalerieInit);
+
+		</script>
+
+
+
     </head>
     <body>
         <header>

@@ -88,6 +88,7 @@ footer p{
         column-count:2;
         
     }
+
     main div a:nth-of-type(odd):hover{
         transform: none;
         
@@ -96,6 +97,7 @@ footer p{
     main div a:nth-of-type(even):hover{
         transform: none;
     }
+
 }
 
 @media screen and (max-width: 480px){
