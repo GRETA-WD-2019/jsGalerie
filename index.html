@@ -37,13 +37,34 @@
 				//Ajout des instruction de style
 				jsGalerieMask.style.width="100vw";
 				jsGalerieMask.style.height="100vh";
-				jsGalerieMask.style.backgroundColor="rgba(0,0,0,0.5)";
+				jsGalerieMask.style.backgroundColor="rgba(0,0,0,0.5)"; //transparent
 				jsGalerieMask.style.position="fixed";
 				jsGalerieMask.style.top="0";
 				jsGalerieMask.style.left="0";
 				jsGalerieMask.style.zIndex="1000";
 
+
+				//Fermeture du masque quand on click dessus
+				jsGalerieMask.addEventListener("click",
+						function(e){
+						/*	
+							//récupération masque
+							let masque = e.currentTarget;
+							//recupération parent
+							let parentDeMasque= masque.parentNode;
+							console.log(parentDeMasque);
+							//Suppression de masque
+							parentDeMasque.removeChild(masque);
+						*/
+						e.currentTarget.parentNode.removeChild(e.currentTarget);	
+
+						}
+				)
+
+
+				//Ajout du masque à la fin du body
 				document.body.appendChild(jsGalerieMask);
+
 
 
 
