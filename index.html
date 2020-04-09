@@ -14,18 +14,22 @@
 
 
 			var jsGalerieShowPhoto=function(evenement){
+				//affichage de la photo
 
+				
+				//on empech le navigateur de suivre le lien sur leque on a cliqué.
 				evenement.preventDefault();
 
-
+				//Récupération de l'URL de la photo originale
+				/* event.currentTarget = balise A sur laquelle j'ai cliqué*/
 				let photoURL=event.currentTarget.getAttribute("href");
 				console.log("affiche de la photo."+photoURL);
 
+
+				//Récupération de la légende la photo
+				/* Récupération de la balise IMG à l'intérieur de mon lien. Puis récupérer l'attribut title de l'image */
 				let photoLegende=event.currentTarget.querySelector("img").getAttribute("title");
 				console.log(photoLegende);
-				
-
-				
 
 
 			}
@@ -35,21 +39,21 @@
 			var jsGalerieInit=function(){
 
 				//récupération de tous les liens
-
 				let Liens=document.querySelectorAll(".jsGalerie>a");
 
 				console.log(Liens);
 
+				// ajouter un évenement onClick sur chaque lien
 				for (index=0;index<Liens.length;index++){
 
 						Liens[index].addEventListener("click",jsGalerieShowPhoto);
 
 				}
-
-
-				
+			
 			}
 
+
+			// AU chargelent on initialise la galerie
 			window.addEventListener("load",jsGalerieInit);
 
 		</script>
