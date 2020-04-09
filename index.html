@@ -68,6 +68,9 @@
 				//Creation du cadre photo
 				let jsGaleriePhotoFrame=document.createElement("figure");
 
+					jsGaleriePhotoFrame.style.position="relative";
+					jsGaleriePhotoFrame.style.fontSize="0";
+
 				//Remplissage du cadre photo
 				//jsGaleriePhotoFrame.innerHTML='"<img src="'+photoURL+'"><figcaption>'+photoLegende+'</figcation>';
 
@@ -82,6 +85,16 @@
 				let jsGalerieLegende=document.createElement("figcaption");
 				jsGalerieLegende.innerHTML=photoLegende;
 
+					jsGalerieLegende.style.position="absolute";
+					jsGalerieLegende.style.left="0";
+					jsGalerieLegende.style.bottom="0";
+					jsGalerieLegende.style.padding="2vmin";
+					jsGalerieLegende.style.backgroundColor="rgba(0,0,0,0.7)";
+					jsGalerieLegende.style.width="100%";
+					jsGalerieLegende.style.color="whitesmoke";
+					jsGalerieLegende.style.textAlign="left";
+					jsGalerieLegende.style.boxSizing="border-box";
+					jsGalerieLegende.style.fontSize="1rem";
 
 				jsGaleriePhotoFrame.appendChild(jsGaleriePhoto);
 				jsGaleriePhotoFrame.appendChild(jsGalerieLegende);
