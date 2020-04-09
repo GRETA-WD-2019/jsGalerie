@@ -62,13 +62,33 @@
 				)
 
 
+				//Creation du cadre photo
+				let jsGaleriePhotoFrame=document.createElement("figure");
+
+				//Remplissage du cadre photo
+				//jsGaleriePhotoFrame.innerHTML='"<img src="'+photoURL+'"><figcaption>'+photoLegende+'</figcation>';
+
+
+				let jsGaleriePhoto=document.createElement("img");
+				jsGaleriePhoto.src=photoURL;
+
+				let jsGalerieLegende=document.createElement("figcaption");
+				jsGalerieLegende.innerHTML=photoLegende;
+
+
+				jsGaleriePhotoFrame.appendChild(jsGaleriePhoto);
+				jsGaleriePhotoFrame.appendChild(jsGalerieLegende);
+
+
+
+				//Ajout du cadre photo dans le masque.
+				jsGalerieMask.appendChild(jsGaleriePhotoFrame);
+
+
+
+
 				//Ajout du masque à la fin du body
 				document.body.appendChild(jsGalerieMask);
-
-
-
-
-
 
 			}
 
