@@ -34,7 +34,7 @@ main{
     margin:auto;
 }
 
-main div {
+main>div {
     width:100%;
     column-count:5;
     column-gap:.5vmax;
@@ -68,4 +68,38 @@ footer p{
     text-align:right;
     font-size:0.8rem;
     border-top :3px double lightgrey;
+}
+
+
+@media screen  and (max-width: 980px){
+    main>div { 
+        column-count:4;
+    }
+}
+
+@media screen  and (max-width: 760px){
+    main>div { 
+        column-count:3;
+    }
+}
+
+@media screen and (max-width: 640px){
+    main>div { 
+        column-count:2;
+        
+    }
+    main div a:nth-of-type(odd):hover{
+        transform: none;
+        
+    }
+    
+    main div a:nth-of-type(even):hover{
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+    main>div { 
+        column-count:1;
+    }
 }
