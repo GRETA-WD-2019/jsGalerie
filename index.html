@@ -17,7 +17,15 @@
 
 				evenement.preventDefault();
 
-				console.log("affiche de la photo.");
+
+				let photoURL=event.currentTarget.getAttribute("href");
+				console.log("affiche de la photo."+photoURL);
+
+				let photoLegende=event.currentTarget.querySelector("img").getAttribute("title");
+				console.log(photoLegende);
+				
+
+				
 
 
 			}
