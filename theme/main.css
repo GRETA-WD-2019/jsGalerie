@@ -46,6 +46,9 @@ main div a {
     width:100%;
     border:1px solid lightgrey;
     margin-bottom:.5vmax;
+    transition-property: transform;
+    transition-duration: .4s;
+    transition-timing-function: ease;
 }
 
 main div a:nth-of-type(odd):hover{

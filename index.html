@@ -45,6 +45,8 @@
 				jsGalerieMask.style.display="flex";
 				jsGalerieMask.style.alignItems="center";
 				jsGalerieMask.style.justifyContent="center";
+				jsGalerieMask.style.opacity="0";
+				jsGalerieMask.style.transition="opacity 0.7s";
 
 
 				//Fermeture du masque quand on click dessus
@@ -59,10 +61,23 @@
 							//Suppression de masque
 							parentDeMasque.removeChild(masque);
 						*/
-						e.currentTarget.parentNode.removeChild(e.currentTarget);	
+
+						
+						// Al fin de la transition ( opacité revenue à 0) on supprime le masque.
+						e.currentTarget.addEventListener("transitionend",
+						
+							function(e){
+								console.log("transition fini suppression du masque");
+								e.currentTarget.parentNode.removeChild(e.currentTarget);
+							}
+						
+						);
+						
+						//on remet l'opacité à 0
+						e.currentTarget.style.opacity="0";
 
 						}
-				)
+				);
 
 
 				//Creation du cadre photo
@@ -109,6 +124,16 @@
 
 				//Ajout du masque à la fin du body
 				document.body.appendChild(jsGalerieMask);
+				
+				//afin que la transition soie prise en compte on déclanche le chnagement d'opacité au bout de 50ms
+				setTimeout(
+					function(){
+						jsGalerieMask.style.opacity="1";
+					},
+					50
+
+				)
+				
 
 			}
 
