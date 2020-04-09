@@ -42,6 +42,9 @@
 				jsGalerieMask.style.top="0";
 				jsGalerieMask.style.left="0";
 				jsGalerieMask.style.zIndex="1000";
+				jsGalerieMask.style.display="flex";
+				jsGalerieMask.style.alignItems="center";
+				jsGalerieMask.style.justifyContent="center";
 
 
 				//Fermeture du masque quand on click dessus
@@ -71,6 +74,10 @@
 
 				let jsGaleriePhoto=document.createElement("img");
 				jsGaleriePhoto.src=photoURL;
+
+					jsGaleriePhoto.style.maxWidth="80vw";
+					jsGaleriePhoto.style.maxHeight="80vh";
+
 
 				let jsGalerieLegende=document.createElement("figcaption");
 				jsGalerieLegende.innerHTML=photoLegende;
