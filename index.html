@@ -17,11 +17,11 @@
 				//affichage de la photo
 
 				
-				//on empech le navigateur de suivre le lien sur leque on a cliqué.
+				//on empeche le navigateur de suivre le lien sur leque on a cliqué.
 				evenement.preventDefault();
 
 				//Récupération de l'URL de la photo originale
-				/* event.currentTarget = balise A sur laquelle j'ai cliqué*/
+				/* event.currentTarget = balise A sur laquelle j'ai cliqué */
 				let photoURL=event.currentTarget.getAttribute("href");
 				console.log("affiche de la photo."+photoURL);
 
@@ -30,6 +30,23 @@
 				/* Récupération de la balise IMG à l'intérieur de mon lien. Puis récupérer l'attribut title de l'image */
 				let photoLegende=event.currentTarget.querySelector("img").getAttribute("title");
 				console.log(photoLegende);
+
+				//Réation d'une div qui va recouvrir l'espace d'affichage.
+				let jsGalerieMask=document.createElement("div");
+				
+				//Ajout des instruction de style
+				jsGalerieMask.style.width="100vw";
+				jsGalerieMask.style.height="100vh";
+				jsGalerieMask.style.backgroundColor="rgba(0,0,0,0.5)";
+				jsGalerieMask.style.position="fixed";
+				jsGalerieMask.style.top="0";
+				jsGalerieMask.style.left="0";
+				jsGalerieMask.style.zIndex="1000";
+
+				document.body.appendChild(jsGalerieMask);
+
+
+
 
 
 			}
